@@ -1,16 +1,14 @@
 from user import *
 from menu import *
+import json
 
 ifContinue = 1
 
 def UserLogin():
-     inputUser = input("Enter username:")
-     inputPwd = input("Enter password:")
+     #inputUser = input("Enter username:")
+     #inputPwd = input("Enter password:")
 
-     loginInfo = CheckLogin(inputUser,inputPwd)
-
-     if loginInfo == 2:
-         print("Success!")
+     CheckLogin()
 
 def AddUser(name,pwd):
      userList.append(User(name,pwd))
@@ -29,6 +27,7 @@ while(ifContinue == 1):
 
     if(loginVal == 0):
         ifContinue = 0
+        SaveData()
         break
     elif(loginVal == 1):
         UserLogin()
