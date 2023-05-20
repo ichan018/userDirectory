@@ -1,6 +1,8 @@
 from user import *
 from menu import *
-import json
+import pickle
+#import json
+import csv
 
 ifContinue = 1
 
@@ -13,6 +15,7 @@ def UserLogin():
 def AddUser(name,pwd):
      userList.append(User(name,pwd))
 
+#LoadData() #load data when ready
 
 while(ifContinue == 1):
     loginVal = -1
